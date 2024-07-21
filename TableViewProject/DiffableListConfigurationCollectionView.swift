@@ -11,6 +11,7 @@ import SnapKit
 struct Setting: Hashable, Identifiable {
     let id = UUID()
     let title: String
+    let imageName: String
 }
 
 class DiffableListConfigurationCollectionView: UIViewController {
@@ -29,9 +30,9 @@ class DiffableListConfigurationCollectionView: UIViewController {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Setting>!
     
-    let generalSetting = [Setting(title: "공지사항"), Setting(title: "실험실"), Setting(title: "버전 정보")]
-    let personalSetting = [Setting(title: "개인/보안"), Setting(title: "알림"), Setting(title: "채팅"), Setting(title: "멀티프로필")]
-    let otherSetting = [Setting(title: "고객센터/도움말")]
+    let generalSetting = [Setting(title: "공지사항", imageName: "info.circle"), Setting(title: "실험실", imageName: "atom"), Setting(title: "버전 정보", imageName: "doc.circle")]
+    let personalSetting = [Setting(title: "개인/보안", imageName: "person.fill"), Setting(title: "알림", imageName: "megaphone"), Setting(title: "채팅", imageName: "bubble.left"), Setting(title: "멀티프로필", imageName: "person.fill.badge.plus")]
+    let otherSetting = [Setting(title: "고객센터/도움말", imageName: "person.fill.questionmark")]
     
     func createLayout() -> UICollectionViewLayout {
         var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -68,6 +69,9 @@ class DiffableListConfigurationCollectionView: UIViewController {
             content.text = itemIdentifier.title
             content.textProperties.color = .white
             content.textProperties.font = .boldSystemFont(ofSize: 16)
+            content.image = UIImage(systemName: itemIdentifier.imageName)
+            content.imageProperties.tintColor = .white
+            
             cell.contentConfiguration = content
             
             var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
