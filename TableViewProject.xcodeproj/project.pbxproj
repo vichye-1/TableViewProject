@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF1D4E462C4D500000DFDF98 /* DiffableListConfigurationCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D4E452C4D4FFF00DFDF98 /* DiffableListConfigurationCollectionView.swift */; };
+		EF1D4E492C4D51D400DFDF98 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF1D4E482C4D51D400DFDF98 /* SnapKit */; };
 		EFC8F9A92BFF259500178594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8F9A82BFF259500178594 /* AppDelegate.swift */; };
 		EFC8F9AB2BFF259500178594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8F9AA2BFF259500178594 /* SceneDelegate.swift */; };
 		EFC8F9AD2BFF259500178594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8F9AC2BFF259500178594 /* ViewController.swift */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF1D4E452C4D4FFF00DFDF98 /* DiffableListConfigurationCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableListConfigurationCollectionView.swift; sourceTree = "<group>"; };
 		EFC8F9A52BFF259500178594 /* TableViewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC8F9A82BFF259500178594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFC8F9AA2BFF259500178594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1D4E492C4D51D400DFDF98 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +70,7 @@
 				EFC8F9B12BFF259700178594 /* Assets.xcassets */,
 				EFC8F9B32BFF259700178594 /* LaunchScreen.storyboard */,
 				EFC8F9B62BFF259700178594 /* Info.plist */,
+				EF1D4E452C4D4FFF00DFDF98 /* DiffableListConfigurationCollectionView.swift */,
 			);
 			path = TableViewProject;
 			sourceTree = "<group>";
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = TableViewProject;
+			packageProductDependencies = (
+				EF1D4E482C4D51D400DFDF98 /* SnapKit */,
+			);
 			productName = TableViewProject;
 			productReference = EFC8F9A52BFF259500178594 /* TableViewProject.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = EFC8F99C2BFF259500178594;
+			packageReferences = (
+				EF1D4E472C4D51D400DFDF98 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EFC8F9A62BFF259500178594 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,6 +154,7 @@
 			files = (
 				EFC8F9BD2BFF2C9500178594 /* SettingsTableViewController.swift in Sources */,
 				EFC8F9AD2BFF259500178594 /* ViewController.swift in Sources */,
+				EF1D4E462C4D500000DFDF98 /* DiffableListConfigurationCollectionView.swift in Sources */,
 				EFC8F9A92BFF259500178594 /* AppDelegate.swift in Sources */,
 				EFC8F9AB2BFF259500178594 /* SceneDelegate.swift in Sources */,
 			);
@@ -375,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF1D4E472C4D51D400DFDF98 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF1D4E482C4D51D400DFDF98 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF1D4E472C4D51D400DFDF98 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFC8F99D2BFF259500178594 /* Project object */;
 }
