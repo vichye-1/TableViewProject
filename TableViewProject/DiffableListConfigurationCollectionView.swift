@@ -12,6 +12,13 @@ struct Setting: Hashable, Identifiable {
     let id = UUID()
     let title: String
     let imageName: String
+    let description: String
+    
+    init(title: String, imageName: String) {
+        self.title = title
+        self.imageName = imageName
+        self.description = "\(title)입니다"
+    }
 }
 
 class DiffableListConfigurationCollectionView: UIViewController {
@@ -71,7 +78,9 @@ class DiffableListConfigurationCollectionView: UIViewController {
             content.textProperties.font = .boldSystemFont(ofSize: 16)
             content.image = UIImage(systemName: itemIdentifier.imageName)
             content.imageProperties.tintColor = .white
-            
+            content.secondaryText = itemIdentifier.description
+            content.secondaryTextProperties.color = .systemGray6
+            content.secondaryTextProperties.font = .systemFont(ofSize: 13)
             cell.contentConfiguration = content
             
             var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
